@@ -1,0 +1,12 @@
+    TITLE: LPA sex test, works with plots and output
+    DATA: FILE IS dat.txt;
+    VARIABLE: NAMES = x1-x8;
+    USEVARIABLES = x1-x8;
+    MISSING = .;
+    CLASSES = c (2);
+    ANALYSIS: TYPE = MIXTURE;
+    OUTPUT: TECH1 TECH7 TECH8;
+    Savedata:
+    File is "datOutput.txt"
+    FORMAT IS FREE;
+    save is cprob;
